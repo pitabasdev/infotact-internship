@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import useCountries from "react-select-country-list";
-import LOFO from "./Yellow and Blue Bold Marketing Agency with Hexagon Frame LinkedIn Banner.png";
+import LOFO from "./header.png";
 import { useNavigate } from "react-router-dom";
 const InternshipForm = () => {
   const navigate = useNavigate();
