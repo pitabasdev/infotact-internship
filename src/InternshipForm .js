@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import useCountries from "react-select-country-list";
 import LOFO from "./header.png";
 import { useNavigate } from "react-router-dom";
 const InternshipForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // This will scroll to the top of the page
+  }, []);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -16,6 +19,7 @@ const InternshipForm = () => {
     whatsappNumber: "",
     skillLevel: "",
     internshipProgram: "",
+    internshipDuration: "",
     resume: null,
     sourceOfInformation: "",
     linkedinConnection: "",
@@ -231,29 +235,51 @@ const InternshipForm = () => {
             in pursuing the degree mentioned above.
           </p>
         </div>
+        <div className="mt-4 flex space-x-4">
+          <div className="flex-1">
+            <label className="block text-sm font-medium">
+              Preferred Internship Program
+            </label>
+            <select
+              name="internshipProgram"
+              required
+              value={formData.internshipProgram}
+              onChange={handleChange}
+              className="mt-2 p-2 w-full border border-gray-300 rounded-md"
+            >
+              <option value="">Select Internship Program</option>
+              <option value="Software Development">Software Development</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Business Development">Business Development</option>
+            </select>
+            <p className="text-xs text-gray-500 mt-2">
+              It will be mentioned on your Certificate
+            </p>
+          </div>
 
-        <div className="mt-4">
-          <label className="block text-sm font-medium">
-            Preferred Internship Program
-          </label>
-          <select
-            name="internshipProgram"
-            required
-            value={formData.internshipProgram}
-            onChange={handleChange}
-            className="mt-2 p-2 w-full border border-gray-300 rounded-md"
-          >
-            <option value="">Select Internship Program</option>
-            <option value="Software Development">Software Development</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Machine Learning">Machine Learning</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Business Development">Business Development</option>
-          </select>
-          <p className="text-xs text-gray-500 mt-2">
-            It will be mentioned on your Certificate
-          </p>
+          <div className="flex-1">
+            <label className="block text-sm font-medium">
+              Internship Duration
+            </label>
+            <select
+              name="internshipDuration"
+              required
+              value={formData.internshipDuration}
+              onChange={handleChange}
+              className="mt-2 p-2 w-full border border-gray-300 rounded-md"
+            >
+              <option value="">Select Duration</option>
+              <option value="1 Month">1 Month</option>
+              <option value="2 Months">2 Months</option>
+              <option value="3 Months">3 Months</option>
+            </select>
+            <p className="text-xs text-gray-500 mt-2">
+              Choose the duration that suits you best
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">

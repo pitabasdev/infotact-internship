@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SuccessfullyApplied = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // This will scroll to the top of the page
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-50 flex justify-center items-center px-4">
       <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-4xl text-center">
@@ -29,6 +32,37 @@ const SuccessfullyApplied = () => {
         </p>
 
         {/* Benefits Section */}
+        <div className="bg-indigo-50 p-6 rounded-lg shadow-md mb-8 text-left">
+          <h2 className="text-xl font-semibold text-indigo-600 mb-4">
+            Important Details:
+          </h2>
+          <ul className="list-disc list-inside text-lg space-y-3">
+            <li>
+              <span className="font-bold text-indigo-800">Type:</span> Remote
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">Work:</span> Flexible
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">Start:</span>{" "}
+              Immediate
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">Duration:</span> 1, 2,
+              or 3 Months
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">
+                Recommendation Letter:
+              </span>{" "}
+              Details will be shared
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">Job:</span> 100% Job
+              assistance on successful completion 🏆
+            </li>
+          </ul>
+        </div>
         <div className="bg-indigo-50 p-6 rounded-lg shadow-md mb-8 text-left">
           <h2 className="text-xl font-semibold text-indigo-600 mb-4">
             Here's What You'll Gain in Our Internship Program:

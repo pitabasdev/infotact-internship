@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // Function to convert data to CSV format
 const convertToCSV = (data) => {
   const headers = [
+    "Data Insert Time", // Added header for data insert time
     "Full Name",
     "Email",
     "Gender",
@@ -12,12 +13,14 @@ const convertToCSV = (data) => {
     "WhatsApp Number",
     "Skill Level",
     "Internship Program",
+    "Internship Duration",
     "Source of Information",
     "LinkedIn",
     "Instagram",
   ];
 
   const rows = data.map((row) => [
+    row.insertTime, // Added insert time to rows
     row.fullName,
     row.email,
     row.gender,
@@ -27,6 +30,7 @@ const convertToCSV = (data) => {
     row.whatsappNumber,
     row.skillLevel,
     row.internshipProgram,
+    row.internshipDuration,
     row.sourceOfInformation,
     row.linkedinConnection,
     row.instagramConnection,
@@ -85,6 +89,7 @@ const Dashboard = () => {
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead>
             <tr>
+    
               <th className="border-b p-2 text-left">Full Name</th>
               <th className="border-b p-2 text-left">Email</th>
               <th className="border-b p-2 text-left">Gender</th>
@@ -94,6 +99,7 @@ const Dashboard = () => {
               <th className="border-b p-2 text-left">WhatsApp Number</th>
               <th className="border-b p-2 text-left">Skill Level</th>
               <th className="border-b p-2 text-left">Internship Program</th>
+              <th className="border-b p-2 text-left">Internship Duration</th>
               <th className="border-b p-2 text-left">Source of Information</th>
               <th className="border-b p-2 text-left">LinkedIn</th>
               <th className="border-b p-2 text-left">Instagram</th>
@@ -102,6 +108,7 @@ const Dashboard = () => {
           <tbody>
             {formData.map((data, index) => (
               <tr key={index} className="border-b">
+             
                 <td className="p-2">{data.fullName}</td>
                 <td className="p-2">{data.email}</td>
                 <td className="p-2">{data.gender}</td>
@@ -111,6 +118,7 @@ const Dashboard = () => {
                 <td className="p-2">{data.whatsappNumber}</td>
                 <td className="p-2">{data.skillLevel}</td>
                 <td className="p-2">{data.internshipProgram}</td>
+                <td className="p-2">{data.internshipDuration}</td>
                 <td className="p-2">{data.sourceOfInformation}</td>
                 <td className="p-2">{data.linkedinConnection}</td>
                 <td className="p-2">{data.instagramConnection}</td>
