@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import useCountries from "react-select-country-list";
-import LOFO from "./default.png";
+import LOFO from "./Yellow and Blue Bold Marketing Agency with Hexagon Frame LinkedIn Banner.png";
 import { useNavigate } from "react-router-dom";
 const InternshipForm = () => {
   const navigate = useNavigate();
@@ -109,121 +109,6 @@ const InternshipForm = () => {
           multiple times for the same domain, as it will be considered an
           invalid application.
         </p>
-
-        <ul className="list-disc list-inside text-left text-lg mb-6">
-          <li className="mb-2">Internship Offer Letter</li>
-          <li className="mb-2">Remote Flexibility 🏠</li>
-          <li className="mb-2">Free Access to Learning</li>
-          <li className="mb-2">Mentorship and Guidance</li>
-          <li className="mb-2">Networking Opportunities 🤝</li>
-          <li className="mb-2">Verified Course Completion Certificate</li>
-          <li className="mb-2">Verified Training Completion Certificate 🥇</li>
-          <li className="mb-2">Verified Internship Completion Certificate</li>
-          <li className="mb-2">Collaboration with International Students</li>
-          <li className="mb-2">Recommendation Letter (if performed well)</li>
-        </ul>
-
-        <div className="bg-indigo-100 p-6 rounded-lg shadow-md mb-8">
-          <p className="font-semibold text-xl mb-4">
-            Frequently Asked Questions:
-          </p>
-          <p className="text-lg mb-2">
-            <strong>Q. How can I register for the Internship Program?</strong>
-          </p>
-          <p className="text-lg mb-4">
-            A. Simply fill up the form, and your Internship Offer Letter will be
-            released within 24-48 hours!
-          </p>
-          <p className="text-lg">
-            The process is simple, just apply, and stay relaxed—we’ve got
-            exciting opportunities lined up for you!
-          </p>
-        </div>
-
-        <div className="mt-6 mb-8">
-          <p className="text-xl font-semibold text-left mb-4">
-            We are offering more than just an internship:
-          </p>
-          <ul className="list-disc list-inside text-left text-lg mb-6 space-y-2">
-            <li>
-              <span className="font-bold">LMS Access:</span> Gain access to our
-              advanced Learning Management System, designed to help you grow.
-            </li>
-            <li>
-              <span className="font-bold">Placement Assistance:</span> We guide
-              you through the job application process with personalized support.
-            </li>
-            <li>
-              <span className="font-bold">Interview Preparation:</span> Get
-              ready for success with our tailored interview preparation
-              resources.
-            </li>
-            <li>
-              <span className="font-bold">Resume Building:</span> Craft a
-              professional resume that stands out with expert tips and guidance.
-            </li>
-            <li>
-              <span className="font-bold">
-                Real-time AI-based Live Projects:
-              </span>{" "}
-              Work on cutting-edge AI projects that simulate real-world
-              scenarios.
-            </li>
-          </ul>
-        </div>
-
-        <div className="mt-6">
-          <p className="font-medium">Connect with us:</p>
-          <ul className="flex justify-center space-x-6 text-center">
-            <li>
-              <a
-                href="https://www.linkedin.com/company/infotact-solution/"
-                className="text-blue-600 hover:text-blue-800 transition-all"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://infotactsolution.tech/"
-                className="text-blue-600 hover:text-blue-800 transition-all"
-              >
-                Official Website
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://facebook.com"
-                className="text-blue-600 hover:text-blue-800 transition-all"
-              >
-                Facebook
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="mt-8 bg-gray-100 p-6 rounded-lg shadow-md">
-          <p className="text-lg mb-4">Visit us at:</p>
-          <p className="text-gray-700 mb-2">
-            Electronic City Bengaluru,Karnataka
-          </p>
-          <p className="text-gray-700">
-            Contact us:{" "}
-            <a
-              href="mailto:info@infotactsolutions.com"
-              className="text-indigo-600 hover:text-indigo-800 transition-all"
-            >
-              info@infotactsolution.tech
-            </a>{" "}
-            |{" "}
-            <a
-              href="tel:+918455066018"
-              className="text-indigo-600 hover:text-indigo-800 transition-all"
-            >
-              +91 84550 66018
-            </a>
-          </p>
-        </div>
       </div>
 
       {/* Internship Form */}
