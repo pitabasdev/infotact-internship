@@ -92,7 +92,9 @@ const InternshipForm = () => {
         <p className="text-2xl font-bold text-gray-700 mb-6">
           🚀 Thank you for your interest in the exciting internship
           opportunities at{" "}
-          <span className="text-indigo-600">Infotact Solutions</span>!
+          <a href="https://infotactsolution.tech/">
+            <span className="text-indigo-600">Infotact Solutions</span>!
+          </a>
         </p>
         <p className="text-xl font-medium mb-6">
           We are thrilled to know more about you and help you kickstart your
@@ -208,6 +210,7 @@ const InternshipForm = () => {
             <option value="2nd Year">2nd Year</option>
             <option value="3rd Year">3rd Year</option>
             <option value="4th Year">4th Year</option>
+            <option value="Graduated">Graduated</option>
           </select>
         </div>
 
