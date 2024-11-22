@@ -52,6 +52,22 @@ const InternshipForm = () => {
     e.preventDefault();
 
     const formDataToSend = new FormData();
+    // Set start and end date based on internship duration
+    const startDate = new Date();
+    const durationMap = {
+      "1 Month": 1,
+      "2 Months": 2,
+      "3 Months": 3,
+    };
+
+    const monthsToAdd = durationMap[formData.internshipDuration] || 1;
+    const endDate = new Date(startDate);
+    endDate.setMonth(startDate.getMonth() + monthsToAdd);
+
+    // Append start and end date to form data
+    formDataToSend.append("startDate", startDate);
+    formDataToSend.append("endDate", endDate);
+
     Object.keys(formData).forEach((key) => {
       if (key === "resume" && formData[key]) {
         formDataToSend.append(key, formData[key]); // Append file

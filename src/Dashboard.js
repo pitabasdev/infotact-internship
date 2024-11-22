@@ -17,24 +17,33 @@ const convertToCSV = (data) => {
     "Source of Information",
     "LinkedIn",
     "Instagram",
+    "Start Date", // Added Start Date header
+    "End Date",   // Added End Date header
   ];
 
-  const rows = data.map((row) => [
-    row.insertTime, // Added insert time to rows
-    row.fullName,
-    row.email,
-    row.gender,
-    row.qualification,
-    row.collegeUniversity,
-    row.contactNumber,
-    row.whatsappNumber,
-    row.skillLevel,
-    row.internshipProgram,
-    row.internshipDuration,
-    row.sourceOfInformation,
-    row.linkedinConnection,
-    row.instagramConnection,
-  ]);
+  const rows = data.map((row) => {
+    const startDate = row.startDate ? new Date(row.startDate) : null;
+    const endDate = row.endDate ? new Date(row.endDate) : null;
+
+    return [
+      row.insertTime,
+      row.fullName,
+      row.email,
+      row.gender,
+      row.qualification,
+      row.collegeUniversity,
+      row.contactNumber,
+      row.whatsappNumber,
+      row.skillLevel,
+      row.internshipProgram,
+      row.internshipDuration,
+      row.sourceOfInformation,
+      row.linkedinConnection,
+      row.instagramConnection,
+      !isNaN(startDate) ? startDate.toLocaleDateString() : "", // Formatting Start Date
+      !isNaN(endDate) ? endDate.toLocaleDateString() : "",     // Formatting End Date
+    ];
+  });
 
   // Create CSV content as a string
   const csvContent = [
@@ -89,7 +98,6 @@ const Dashboard = () => {
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead>
             <tr>
-    
               <th className="border-b p-2 text-left">Full Name</th>
               <th className="border-b p-2 text-left">Email</th>
               <th className="border-b p-2 text-left">Gender</th>
@@ -103,12 +111,13 @@ const Dashboard = () => {
               <th className="border-b p-2 text-left">Source of Information</th>
               <th className="border-b p-2 text-left">LinkedIn</th>
               <th className="border-b p-2 text-left">Instagram</th>
+              <th className="border-b p-2 text-left">Start Date</th> {/* Start Date Header */}
+              <th className="border-b p-2 text-left">End Date</th>   {/* End Date Header */}
             </tr>
           </thead>
           <tbody>
             {formData.map((data, index) => (
               <tr key={index} className="border-b">
-             
                 <td className="p-2">{data.fullName}</td>
                 <td className="p-2">{data.email}</td>
                 <td className="p-2">{data.gender}</td>
@@ -122,6 +131,8 @@ const Dashboard = () => {
                 <td className="p-2">{data.sourceOfInformation}</td>
                 <td className="p-2">{data.linkedinConnection}</td>
                 <td className="p-2">{data.instagramConnection}</td>
+                <td className="p-2">{data.startDate ? new Date(data.startDate).toISOString() : "N/A"}</td> {/* Start Date Row */}
+                <td className="p-2">{data.endDate ? new Date(data.endDate).toISOString() : "N/A"}</td>   {/* End Date Row */}
               </tr>
             ))}
           </tbody>
