@@ -57,10 +57,13 @@ const InternshipForm = () => {
     });
 
     try {
-      const response = await fetch("https://infotact-internship-backend.onrender.com/submit-form", {
-        method: "POST",
-        body: formDataToSend, // Sending FormData as body
-      });
+      const response = await fetch(
+        "https://infotact-internship-backend.onrender.com/submit-form",
+        {
+          method: "POST",
+          body: formDataToSend, // Sending FormData as body
+        }
+      );
 
       if (response.ok) {
         const responseData = await response.json();
@@ -85,84 +88,139 @@ const InternshipForm = () => {
           className="w-full h-auto rounded-lg"
         />
       </div>
+      <div className="mb-6 text-center text-gray-800 bg-gradient-to-r from-blue-50 to-purple-100 p-8 rounded-lg shadow-lg">
+        <p className="text-2xl font-bold text-gray-700 mb-6">
+          🚀 Thank you for your interest in the exciting internship
+          opportunities at{" "}
+          <span className="text-indigo-600">Infotact Solutions</span>!
+        </p>
+        <p className="text-xl font-medium mb-6">
+          We are thrilled to know more about you and help you kickstart your
+          career. Our internship program is designed to provide hands-on
+          experience and valuable exposure to industry-leading projects.
+        </p>
+        <p className="text-lg text-gray-600 mb-6">
+          Please fill out the application form below, and rest assured, all your
+          information will remain confidential. We strive to make this process
+          smooth and beneficial for you.
+        </p>
+        <p className="text-red-500 font-bold mb-6 text-left">
+          <span className="italic">𝐍𝐨𝐭𝐞:</span> Please refrain from applying
+          multiple times for the same domain, as it will be considered an
+          invalid application.
+        </p>
 
-      {/* Form Information */}
-      <div className="mb-6 text-center text-gray-700">
-        <p className="text-xl font-medium mb-4">
-          Thank you for your interest in the internship opportunities at
-          Agronni. We are excited to learn more about you! Please fill out this
-          form to apply for our internship program. All information will be kept
-          confidential.
-        </p>
-        <p className="mb-4 text-left">
-          Please fill all the required fields carefully, information provided
-          will be used in offer letter and Completion Certificate.
-        </p>
-        <p className="text-red-500 font-bold mb-4 text-left">
-          𝐍𝐨𝐭𝐞: 𝐏𝐥𝐞𝐚𝐬𝐞 𝐝𝐨 𝐧𝐨𝐭 𝐬𝐩𝐚𝐦 (𝐚𝐩𝐩𝐥𝐲 𝐦𝐮𝐥𝐭𝐢𝐩𝐥𝐞 𝐭𝐢𝐦𝐞𝐬 𝐟𝐨𝐫 𝐬𝐚𝐦𝐞 𝐝𝐨𝐦𝐚𝐢𝐧), 𝐢𝐧
-          𝐭𝐡𝐢𝐬 𝐜𝐚𝐬𝐞 𝐲𝐨𝐮𝐫 𝐚𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐰𝐢𝐥𝐥 𝐛𝐞 𝐜𝐨𝐧𝐬𝐢𝐝𝐞𝐫 𝐚𝐬 𝐢𝐧𝐯𝐚𝐥𝐢𝐝.
-        </p>
-        <ul className="list-disc list-inside mb-4 text-left">
-          <li>Offer Letter</li>
-          <li>Internship Certificate</li>
-          <li>Letter of recommendation based on Performance</li>
+        <ul className="list-disc list-inside text-left text-lg mb-6">
+          <li className="mb-2">Internship Offer Letter</li>
+          <li className="mb-2">Remote Flexibility 🏠</li>
+          <li className="mb-2">Free Access to Learning</li>
+          <li className="mb-2">Mentorship and Guidance</li>
+          <li className="mb-2">Networking Opportunities 🤝</li>
+          <li className="mb-2">Verified Course Completion Certificate</li>
+          <li className="mb-2">Verified Training Completion Certificate 🥇</li>
+          <li className="mb-2">Verified Internship Completion Certificate</li>
+          <li className="mb-2">Collaboration with International Students</li>
+          <li className="mb-2">Recommendation Letter (if performed well)</li>
         </ul>
-        <p className="font-medium mb-4 text-left">
-          Q. How can I register for this Internship Program?
-        </p>
-        <p className="text-left">
-          A. Fill up the form and Internship Offer Letter will be released
-          within 24-48 hours.
-        </p>
-        <p className="mt-4 text-left">
-          Just apply and stay relaxed—we have something great for you. The
-          application process is very simple.
-        </p>
 
-        <div className="mt-6">
-          <p className="font-medium">Our Socials:</p>
-          <ul className="flex justify-center space-x-4 text-center">
+        <div className="bg-indigo-100 p-6 rounded-lg shadow-md mb-8">
+          <p className="font-semibold text-xl mb-4">
+            Frequently Asked Questions:
+          </p>
+          <p className="text-lg mb-2">
+            <strong>Q. How can I register for the Internship Program?</strong>
+          </p>
+          <p className="text-lg mb-4">
+            A. Simply fill up the form, and your Internship Offer Letter will be
+            released within 24-48 hours!
+          </p>
+          <p className="text-lg">
+            The process is simple, just apply, and stay relaxed—we’ve got
+            exciting opportunities lined up for you!
+          </p>
+        </div>
+
+        <div className="mt-6 mb-8">
+          <p className="text-xl font-semibold text-left mb-4">
+            We are offering more than just an internship:
+          </p>
+          <ul className="list-disc list-inside text-left text-lg mb-6 space-y-2">
             <li>
-              <a href="https://web" className="text-blue-500">
-                Linkedin
-              </a>
+              <span className="font-bold">LMS Access:</span> Gain access to our
+              advanced Learning Management System, designed to help you grow.
             </li>
             <li>
-              <a href="https://web" className="text-blue-500">
-                Official Site
-              </a>
+              <span className="font-bold">Placement Assistance:</span> We guide
+              you through the job application process with personalized support.
             </li>
             <li>
-              <a href="https://web" className="text-blue-500">
-                WhatsApp
-              </a>
+              <span className="font-bold">Interview Preparation:</span> Get
+              ready for success with our tailored interview preparation
+              resources.
             </li>
             <li>
-              <a href="https://web" className="text-blue-500">
-                Facebook
-              </a>
+              <span className="font-bold">Resume Building:</span> Craft a
+              professional resume that stands out with expert tips and guidance.
             </li>
             <li>
-              <a href="https://web" className="text-blue-500">
-                Telegram
-              </a>
+              <span className="font-bold">
+                Real-time AI-based Live Projects:
+              </span>{" "}
+              Work on cutting-edge AI projects that simulate real-world
+              scenarios.
             </li>
           </ul>
         </div>
 
         <div className="mt-6">
-          <p>
-            If you are located in Sampark Vihar, Patia, Bhubaneswar, Odisha
-            751024.
+          <p className="font-medium">Connect with us:</p>
+          <ul className="flex justify-center space-x-6 text-center">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/infotact-solution/"
+                className="text-blue-600 hover:text-blue-800 transition-all"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://infotactsolution.tech/"
+                className="text-blue-600 hover:text-blue-800 transition-all"
+              >
+                Official Website
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://facebook.com"
+                className="text-blue-600 hover:text-blue-800 transition-all"
+              >
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-8 bg-gray-100 p-6 rounded-lg shadow-md">
+          <p className="text-lg mb-4">Visit us at:</p>
+          <p className="text-gray-700 mb-2">
+            Electronic City Bengaluru,Karnataka
           </p>
-          <p>
-            Contact:{" "}
-            <a href="mailto:info@agronni.com" className="text-blue-500">
-              info@agronni.com
+          <p className="text-gray-700">
+            Contact us:{" "}
+            <a
+              href="mailto:info@infotactsolutions.com"
+              className="text-indigo-600 hover:text-indigo-800 transition-all"
+            >
+              info@infotactsolution.tech
             </a>{" "}
             |{" "}
-            <a href="tel:+918455066018" className="text-blue-500">
-              8455066018
+            <a
+              href="tel:+918455066018"
+              className="text-indigo-600 hover:text-indigo-800 transition-all"
+            >
+              +91 84550 66018
             </a>
           </p>
         </div>
@@ -396,15 +454,6 @@ const InternshipForm = () => {
           </select>
           <p className="text-xs text-gray-500 mt-2">
             Help us improve our online presence.
-          </p>
-          <p className="text-xs text-gray-500 mt-2">
-            Important: Connect on LinkedIn for the latest updates.{" "}
-            <a
-              href="https://www.linkedin.com/company/infotact-solution/"
-              className="text-blue-500"
-            >
-              Here is the link
-            </a>
           </p>
         </div>
 
