@@ -199,7 +199,7 @@ const SuccessfullyApplied = () => {
             </li>
             <li>
               <a
-                href="https://infotactsolution.tech/"
+                href="https://infotact.in/"
                 className="text-blue-600 hover:text-blue-800 transition-all"
               >
                 Official Website
@@ -225,10 +225,10 @@ const SuccessfullyApplied = () => {
           <p className="text-gray-700">
             <strong>Contact:</strong>{" "}
             <a
-              href="mailto:info@infotactsolution.tech"
+              href="mailto:info@infotact.in"
               className="text-indigo-600 hover:text-indigo-800"
             >
-              info@infotactsolution.tech
+              info@infotact.in
             </a>{" "}
             |{" "}
             <a

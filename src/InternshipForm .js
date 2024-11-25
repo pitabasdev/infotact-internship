@@ -112,7 +112,7 @@ const InternshipForm = () => {
         <p className="text-2xl font-bold text-gray-700 mb-6">
           🚀 Thank you for your interest in the exciting internship
           opportunities at{" "}
-          <a href="https://infotactsolution.tech/">
+          <a href="https://infotact.in/">
             <span className="text-indigo-600">Infotact Solutions</span>!
           </a>
         </p>
@@ -251,52 +251,53 @@ const InternshipForm = () => {
             in pursuing the degree mentioned above.
           </p>
         </div>
-        <div className="mt-4 flex space-x-4">
-          <div className="flex-1">
-            <label className="block text-sm font-medium">
-              Preferred Internship Program
-            </label>
-            <select
-              name="internshipProgram"
-              required
-              value={formData.internshipProgram}
-              onChange={handleChange}
-              className="mt-2 p-2 w-full border border-gray-300 rounded-md"
-            >
-              <option value="">Select Internship Program</option>
-              <option value="Software Development">Software Development</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-              <option value="Data Science">Data Science</option>
-              <option value="Machine Learning">Machine Learning</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Business Development">Business Development</option>
-            </select>
-            <p className="text-xs text-gray-500 mt-2">
-              It will be mentioned on your Certificate
-            </p>
-          </div>
+        <div className="mt-4 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+  <div className="flex-1">
+    <label className="block text-sm font-medium">
+      Preferred Internship Program
+    </label>
+    <select
+      name="internshipProgram"
+      required
+      value={formData.internshipProgram}
+      onChange={handleChange}
+      className="mt-2 p-2 w-full border border-gray-300 rounded-md"
+    >
+      <option value="">Select Internship Program</option>
+      <option value="Software Development">Software Development</option>
+      <option value="UI/UX Design">UI/UX Design</option>
+      <option value="Data Science">Data Science</option>
+      <option value="Machine Learning">Machine Learning</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Business Development">Business Development</option>
+    </select>
+    <p className="text-xs text-gray-500 mt-2">
+      It will be mentioned on your Certificate
+    </p>
+  </div>
 
-          <div className="flex-1">
-            <label className="block text-sm font-medium">
-              Internship Duration
-            </label>
-            <select
-              name="internshipDuration"
-              required
-              value={formData.internshipDuration}
-              onChange={handleChange}
-              className="mt-2 p-2 w-full border border-gray-300 rounded-md"
-            >
-              <option value="">Select Duration</option>
-              <option value="1 Month">1 Month</option>
-              <option value="2 Months">2 Months</option>
-              <option value="3 Months">3 Months</option>
-            </select>
-            <p className="text-xs text-gray-500 mt-2">
-              Choose the duration that suits you best
-            </p>
-          </div>
-        </div>
+  <div className="flex-1">
+    <label className="block text-sm font-medium">
+      Internship Duration
+    </label>
+    <select
+      name="internshipDuration"
+      required
+      value={formData.internshipDuration}
+      onChange={handleChange}
+      className="mt-2 p-2 w-full border border-gray-300 rounded-md"
+    >
+      <option value="">Select Duration</option>
+      <option value="1 Month">1 Month</option>
+      <option value="2 Months">2 Months</option>
+      <option value="3 Months">3 Months</option>
+    </select>
+    <p className="text-xs text-gray-500 mt-2">
+      Choose the duration that suits you best
+    </p>
+  </div>
+</div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           <div className="col-span-1">
