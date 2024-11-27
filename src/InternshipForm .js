@@ -78,7 +78,7 @@ const InternshipForm = () => {
 
     try {
       const response = await fetch(
-        "http://13.233.131.213/submit-form",
+        "https://www.zidiolearning.live/submit-form",
         {
           method: "POST",
           body: formDataToSend, // Sending FormData as body

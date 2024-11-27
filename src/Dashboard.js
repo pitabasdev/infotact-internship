@@ -62,7 +62,7 @@ const Dashboard = () => {
     // Fetch the form data from the backend
     const fetchData = async () => {
       try {
-        const response = await fetch("http://13.233.131.213/get-form-data"); // Change this URL to your actual API
+        const response = await fetch("https://www.zidiolearning.live/get-form-data"); // Change this URL to your actual API
         const data = await response.json();
         setFormData(data); // Assuming the response contains an array of form data
       } catch (error) {
