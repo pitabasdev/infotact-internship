@@ -53,6 +53,24 @@ const SuccessfullyApplied = () => {
             </li>
             <li>
               <span className="font-bold text-indigo-800">
+                Last Date to Apply:
+              </span>{" "}
+              15/12/2024
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">
+                Assessment Date:
+              </span>{" "}
+              18/12/2024
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">
+                Internship Start Date:
+              </span>{" "}
+              20/12/2024
+            </li>
+            <li>
+              <span className="font-bold text-indigo-800">
                 Recommendation Letter:
               </span>{" "}
               Details will be shared
@@ -61,8 +79,13 @@ const SuccessfullyApplied = () => {
               <span className="font-bold text-indigo-800">Job:</span> 100% Job
               assistance on successful completion 🏆
             </li>
+            <li>
+              <span className="font-bold text-indigo-800">Stipend:</span> Up to
+              ₹5,000 based on performance
+            </li>
           </ul>
         </div>
+
         <div className="bg-indigo-50 p-6 rounded-lg shadow-md mb-8 text-left">
           <h2 className="text-xl font-semibold text-indigo-600 mb-4">
             Here's What You'll Gain in Our Internship Program:
