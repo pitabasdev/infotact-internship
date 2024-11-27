@@ -78,7 +78,7 @@ const InternshipForm = () => {
 
     try {
       const response = await fetch(
-        "https://infotact-internship-backend.onrender.com/submit-form",
+        "http://13.233.131.213/submit-form",
         {
           method: "POST",
           body: formDataToSend, // Sending FormData as body
