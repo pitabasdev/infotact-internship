@@ -3,6 +3,8 @@ import Select from "react-select";
 import useCountries from "react-select-country-list";
 import LOFO from "./header.png";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const InternshipForm = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // This will scroll to the top of the page
@@ -89,9 +91,14 @@ const InternshipForm = () => {
         const responseData = await response.json();
         console.log("Form data submitted:", responseData);
 
-        navigate("/success");
+        toast.success("Form submitted successfully!"); // Show success toast
+        navigate("/success"); // Redirect to the success page
+      } else if (response.status === 400) {
+        const errorData = await response.json();
+        toast.error(errorData.error); // Show error toast for duplicate application
       } else {
         console.error("Error submitting form:", response.statusText);
+        toast.error("Something went wrong. Please try again!"); // Fallback error
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -100,6 +107,7 @@ const InternshipForm = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+      <ToastContainer position="top-left" autoClose={5000} />
       {/* Image Section */}
       <div className="mb-6">
         <img
