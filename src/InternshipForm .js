@@ -459,7 +459,7 @@ const InternshipForm = () => {
           <p className="text-xs text-gray-500 mt-2">
             Follow us for updates!{" "}
             <a
-              href="https://www.instagram.com/infotactsolution"
+              href="https://www.instagram.com/infotact_solutions/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500"
