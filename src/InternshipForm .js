@@ -239,6 +239,7 @@ const InternshipForm = () => {
             <option value="3rd Year">3rd Year</option>
             <option value="4th Year">4th Year</option>
             <option value="Graduated">Graduated</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
@@ -393,6 +394,9 @@ const InternshipForm = () => {
             <option value="Twitter">Twitter</option>
             <option value="Facebook">Facebook</option>
             <option value="Instagram">Instagram</option>
+            <option value="Whatsapp">WhatsApp</option>
+            <option value="Unstop">Unstop</option>
+            <option value="Other">Other</option>
           </select>
           <p className="text-xs text-gray-500 mt-2">
             Help us improve our online presence.
