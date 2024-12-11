@@ -67,7 +67,7 @@ const SuccessfullyApplied = () => {
               <span className="font-bold text-indigo-800">
                 Internship Start Date:
               </span>{" "}
-              20/12/2024
+              25/12/2024
             </li>
             <li>
               <span className="font-bold text-indigo-800">
